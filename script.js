@@ -302,6 +302,127 @@ function initEnquiryForm() {
 }
 
 /* ==========================================================================
+   Animated stat counters
+   Counts each .stat-value up to its data-count-to when scrolled into view.
+   Values with data-static are left untouched. Skips the animation entirely
+   for users who prefer reduced motion.
+   ========================================================================== */
+function initStatCounters() {
+  const stats = document.querySelectorAll('.stat-value[data-count-to]');
+  if (!stats.length) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function formatValue(el, value) {
+    const decimals = Number(el.dataset.decimals || 0);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    return `${prefix}${value.toFixed(decimals)}${suffix}`;
+  }
+
+  function animateStat(el) {
+    const target = Number(el.dataset.countTo);
+    if (reduceMotion || !('requestAnimationFrame' in window)) {
+      el.textContent = formatValue(el, target);
+      return;
+    }
+
+    const duration = 1400;
+    const start = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = formatValue(el, target * eased);
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    stats.forEach(animateStat);
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateStat(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  stats.forEach((stat) => observer.observe(stat));
+}
+
+/* ==========================================================================
+   Lead magnet form (checklist download)
+   Same defensive pattern as the enquiry form (honeypot + validation) but
+   scoped to a single email field, per lead-magnet best practice of keeping
+   the gate as low-friction as possible.
+   ========================================================================== */
+function initLeadMagnetForm() {
+  const form = document.getElementById('leadMagnetForm');
+  const submitBtn = document.getElementById('leadMagnetSubmit');
+  const errorEl = document.getElementById('lm-email-error');
+  const successPanel = document.getElementById('leadMagnetSuccess');
+  if (!form || !submitBtn || !errorEl || !successPanel) return;
+
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailInput = form.elements.email;
+
+  function validateEmail() {
+    const value = emailInput.value.trim();
+    let message = '';
+    if (!value) message = 'Please enter your email address.';
+    else if (!EMAIL_REGEX.test(value)) message = 'Please enter a valid email address.';
+
+    errorEl.textContent = message;
+    emailInput.setAttribute('aria-invalid', message ? 'true' : 'false');
+    return !message;
+  }
+
+  emailInput.addEventListener('blur', validateEmail);
+
+  function setLoading(isLoading) {
+    submitBtn.disabled = isLoading;
+    submitBtn.classList.toggle('loading', isLoading);
+  }
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    // Honeypot: if this hidden field has a value, silently drop the submission.
+    if (form.elements['lm-website'] && form.elements['lm-website'].value) {
+      return;
+    }
+
+    if (!validateEmail()) return;
+
+    setLoading(true);
+
+    try {
+      await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: emailInput.value.trim(), lead_magnet: 'it-security-checklist' }),
+      });
+    } catch (error) {
+      // Placeholder endpoint — delivery isn't wired up yet. Still unlock the
+      // direct download below so the offer works end-to-end on a static site.
+    } finally {
+      setLoading(false);
+      form.hidden = true;
+      successPanel.hidden = false;
+    }
+  });
+}
+
+/* ==========================================================================
    Footer current year
    ========================================================================== */
 function initFooterYear() {
@@ -315,5 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFadeInObserver();
   initTestimonialCarousel();
   initEnquiryForm();
+  initStatCounters();
+  initLeadMagnetForm();
   initFooterYear();
 });

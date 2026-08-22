@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thisisrey116.github.io/workflow/sitemap.xml

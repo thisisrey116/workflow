@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 10-Point IT Security Checklist | PLANET IT</title>
+  <meta name="description" content="A free, practical 10-point IT security checklist covering MFA, backups, patching, access control, and incident response — from PLANET IT.">
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <style>
+    :root {
+      --color-bg: #070c1a;
+      --color-surface: #101a35;
+      --color-border: #263461;
+      --color-text: #eef2fb;
+      --color-text-muted: #a7b1d1;
+      --color-text-faint: #67719c;
+      --color-accent: #22d3ee;
+      --color-violet: #8b5cf6;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 3rem 1.25rem 5rem;
+    }
+    .doc { max-width: 720px; margin-inline: auto; }
+    .doc-header { margin-bottom: 2.5rem; }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-text);
+      text-decoration: none;
+      margin-bottom: 2rem;
+    }
+    .brand svg { color: var(--color-accent); }
+    .eyebrow {
+      font-family: var(--font-mono);
+      color: var(--color-accent);
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+    }
+    .doc-header p { color: var(--color-text-muted); max-width: 60ch; }
+    .checklist { display: flex; flex-direction: column; gap: 1.25rem; margin: 2.5rem 0; }
+    .check-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+    }
+    .check-num {
+      font-family: var(--font-mono);
+      color: var(--color-violet);
+      font-weight: 500;
+      flex-shrink: 0;
+      width: 2rem;
+    }
+    .check-item h2 { font-size: 1.0625rem; margin: 0 0 0.35rem; font-family: var(--font-display); }
+    .check-item p { margin: 0; color: var(--color-text-muted); font-size: 0.9375rem; }
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--color-accent);
+      font-size: 0.9375rem;
+    }
+    .print-hint {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--color-text-faint);
+      border-top: 1px solid var(--color-border);
+      padding-top: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    @media print {
+      body { background: #fff; color: #111; padding: 0; }
+      .check-item { background: #f6f6f6; border-color: #ccc; }
+      .print-hint, .back-link { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="doc">
+    <div class="doc-header">
+      <a href="../index.html" class="brand">
+        <svg viewBox="0 0 32 32" width="24" height="24" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/><path d="M16 2C11 7 11 25 16 30" stroke="currentColor" stroke-width="2"/><path d="M16 2C21 7 21 25 16 30" stroke="currentColor" stroke-width="2"/><path d="M2 16H30" stroke="currentColor" stroke-width="2"/></svg>
+        PLANET&nbsp;IT
+      </a>
+      <p class="eyebrow">Free Resource</p>
+      <h1>The 10-Point IT Security Checklist</h1>
+      <p>The same baseline our engineers check on day one with every new client. Work through it in an afternoon — no security team required.</p>
+    </div>
+
+    <div class="checklist">
+      <div class="check-item">
+        <span class="check-num">01</span>
+        <div>
+          <h2>Multi-factor authentication on every admin account</h2>
+          <p>Passwords alone are not enough. Require MFA for email, cloud consoles, VPN, and any account with elevated privileges first.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <span class="check-num">02</span>
+        <div>
+          <h2>Backups you've actually tested</h2>
+          <p>A backup you haven't restored is a guess. Schedule a quarterly test restore and confirm recovery time meets your needs.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <span class="check-num">03</span>
+        <div>
+          <h2>Patch management with no forgotten systems</h2>
+          <p>Inventory every device and application, including end-of-life software that no longer receives security updates.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <span class="check-num">04</span>
+        <div>
+          <h2>Least-privilege access review</h2>
+          <p>Audit who has admin rights and why. Remove standing access that isn't tied to a current job function.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <span class="check-num">05</span>
+        <div>
+          <h2>A written incident response plan</h2>
+          <p>Know who to call, what to isolate first, and how to communicate internally before an incident happens — not during one.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <span class="check-num">06</span>
+        <div>
+          <h2>Endpoint protection on every device</h2>
+          <p>Laptops, servers, and mobile devices all need active monitoring — not just antivirus that runs a scan once a week.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <span class="check-num">07</span>
+        <div>
+          <h2>Network segmentation for critical systems</h2>
+          <p>Keep guest Wi-Fi, IoT devices, and finance systems on separate network segments so a breach in one doesn't spread to all.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <span class="check-num">08</span>
+        <div>
+          <h2>Encryption at rest and in transit</h2>
+          <p>Confirm sensitive data is encrypted on disk and every connection handling it uses TLS — no exceptions for "internal only" traffic.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <span class="check-num">09</span>
+        <div>
+          <h2>Security awareness training, on a schedule</h2>
+          <p>Run phishing simulations at least quarterly. Most breaches start with a person clicking a link, not a firewall failing.</p>
+        </div>
+      </div>
+      <div class="check-item">
+        <span class="check-num">10</span>
+        <div>
+          <h2>A short list of third-party risk</h2>
+          <p>List every vendor with access to your systems or data. Confirm each one has reasonable security practices of their own.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="print-hint">Tip: use your browser's Print → Save as PDF to keep an offline copy.</p>
+    <a href="../index.html#enquiry" class="back-link">← Want help working through this list? Talk to an engineer</a>
+  </div>
+</body>
+</html>

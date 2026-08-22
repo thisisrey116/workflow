@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PLANET IT | Managed IT Support, Cloud &amp; Cybersecurity Services</title>
   <meta name="description" content="PLANET IT provides managed IT support, cloud migration, cybersecurity, and network infrastructure services for growing businesses. Get a free consultation today.">
+  <link rel="canonical" href="https://thisisrey116.github.io/workflow/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -12,12 +13,50 @@
   <meta property="og:description" content="Managed IT support, cloud migration, cybersecurity, and network infrastructure for growing businesses.">
   <meta property="og:site_name" content="PLANET IT">
   <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://thisisrey116.github.io/workflow/">
+  <meta property="og:image" content="https://thisisrey116.github.io/workflow/assets/photos/hero-datacenter.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PLANET IT | Managed IT Support, Cloud & Cybersecurity Services">
+  <meta name="twitter:description" content="Managed IT support, cloud migration, cybersecurity, and network infrastructure for growing businesses.">
+  <meta name="twitter:image" content="https://thisisrey116.github.io/workflow/assets/photos/hero-datacenter.jpg">
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; connect-src 'self' https://example.com; base-uri 'self'; form-action 'self' https://example.com">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/photos/hero-datacenter.jpg">
 
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "PLANET IT",
+    "description": "Managed IT support, cloud migration, cybersecurity, and network infrastructure services for growing businesses.",
+    "url": "https://thisisrey116.github.io/workflow/",
+    "image": "https://thisisrey116.github.io/workflow/assets/photos/hero-datacenter.jpg",
+    "telephone": "+1-503-555-1029",
+    "email": "hello@planetit.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "481 Kestrel Avenue, Suite 210",
+      "addressLocality": "Portland",
+      "addressRegion": "OR",
+      "postalCode": "97204",
+      "addressCountry": "US"
+    },
+    "areaServed": "US",
+    "priceRange": "$$"
+  }
+  </script>
 </head>
 <body>
 
@@ -38,6 +77,8 @@
         <span class="logo-text">PLANET&nbsp;IT</span>
       </a>
 
+      <p class="status-pill"><span class="status-dot" aria-hidden="true"></span>All systems operational</p>
+
       <button class="nav-toggle" id="navToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation menu">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -46,6 +87,8 @@
 
       <ul class="nav-links" id="primaryNav">
         <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#security">Security</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#enquiry">Contact</a></li>
         <li><a href="#enquiry" class="btn btn-nav">Get a Quote</a></li>
@@ -57,11 +100,24 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-photo" aria-hidden="true"></div>
+
+      <svg class="hero-circuit" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+        <path class="circuit-path path-a" d="M -20 560 L 150 560 L 150 460 L 340 460 L 340 620 L 560 620 L 560 340 L 780 340 L 780 120 L 980 120 L 980 260 L 1220 260" />
+        <path class="circuit-path path-b" d="M -20 680 L 260 680 L 260 560 L 480 560 L 480 680 L 700 680 L 700 480 L 900 480 L 900 620 L 1220 620" />
+        <path class="circuit-path path-c" d="M 700 -20 L 700 80 L 860 80 L 860 200 L 1060 200 L 1060 40 L 1220 40" />
+        <circle class="circuit-node n1" cx="150" cy="460" r="4.5" />
+        <circle class="circuit-node n2" cx="560" cy="340" r="4.5" />
+        <circle class="circuit-node n3" cx="780" cy="120" r="4.5" />
+        <circle class="circuit-node n4" cx="980" cy="260" r="4.5" />
+        <circle class="circuit-node n5" cx="900" cy="480" r="4.5" />
+        <circle class="circuit-packet" r="4" />
+      </svg>
+
       <div class="container hero-inner">
         <p class="eyebrow fade-in">Trusted IT Partner Since 2011</p>
         <h1 id="hero-heading" class="hero-title fade-in">
-          IT infrastructure that keeps pace with your business.
+          IT infrastructure that keeps pace with your <span class="accent-word">business</span>.
         </h1>
         <p class="hero-subheading fade-in">
           Managed support, cloud migration, cybersecurity, and network engineering — delivered by one accountable team.
@@ -141,6 +197,138 @@
       </div>
     </section>
 
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="PLANET IT by the numbers">
+      <div class="container stats-grid">
+        <div class="fade-in">
+          <p class="stat-value" data-count-to="500" data-suffix="+">0</p>
+          <p class="stat-label">Endpoints Protected</p>
+        </div>
+        <div class="fade-in">
+          <p class="stat-value" data-count-to="99.98" data-decimals="2" data-suffix="%">0</p>
+          <p class="stat-label">Uptime SLA</p>
+        </div>
+        <div class="fade-in">
+          <p class="stat-value" data-static="24/7">24/7</p>
+          <p class="stat-label">Monitoring &amp; Response</p>
+        </div>
+        <div class="fade-in">
+          <p class="stat-value" data-count-to="15" data-prefix="&lt;" data-suffix="min">0</p>
+          <p class="stat-label">Avg. Response Time</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY / OUR WORK ============ -->
+    <section class="gallery" id="work" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">Behind The Screens</p>
+          <h2 id="gallery-heading">Infrastructure you can see</h2>
+          <p class="section-lead">A look at the environments our engineers build, monitor, and defend every day.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-card fade-in photo-reveal">
+            <div class="gallery-photo-wrap">
+              <img src="assets/photos/gallery-network.jpg" alt="Close-up of a structured network patch panel with labeled ethernet cabling" width="1000" height="750" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="gallery-caption">
+              <h3>Network Infrastructure</h3>
+              <p>Every run labeled, tested, and documented — no mystery cabling left for the next engineer to untangle.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card fade-in photo-reveal">
+            <div class="gallery-photo-wrap">
+              <img src="assets/photos/gallery-monitoring.jpg" alt="IT engineer walking through a server room aisle reviewing infrastructure status on a tablet" width="1000" height="750" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="gallery-caption">
+              <h3>24/7 Monitoring</h3>
+              <p>Real engineers watching real dashboards — round-the-clock eyes on your environment, not just alerts in an inbox.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card fade-in photo-reveal">
+            <div class="gallery-photo-wrap">
+              <img src="assets/photos/gallery-cybersecurity.jpg" alt="Streams of code on a dark terminal screen representing threat detection and log analysis" width="1000" height="750" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="gallery-caption">
+              <h3>Threat Detection</h3>
+              <p>Continuous log analysis and anomaly detection aligned to recognized security frameworks.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST / SECURITY ============ -->
+    <section class="trust" id="security" aria-labelledby="trust-heading">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <p class="eyebrow">How We Protect You</p>
+          <h2 id="trust-heading">Security-first by design</h2>
+          <p class="section-lead">Every engagement is built on defense-in-depth — layered controls, not a single point of failure. Here's what that looks like in practice.</p>
+        </div>
+
+        <div class="trust-grid">
+          <div class="trust-item fade-in">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="24" height="24" fill="none">
+                <path d="M24 6L40 12V22C40 32 33.5 39.5 24 42C14.5 39.5 8 32 8 22V12L24 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <rect x="18" y="21" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="2.2"/>
+                <path d="M20.5 21V18C20.5 15.5 22 14 24 14C26 14 27.5 15.5 27.5 18V21" stroke="currentColor" stroke-width="2.2"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Zero Trust Architecture</h3>
+              <p>Every request verified explicitly — no implicit trust based on network location alone.</p>
+            </div>
+          </div>
+
+          <div class="trust-item fade-in">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="24" height="24" fill="none">
+                <path d="M6 24C10 15 17 10 24 10C31 10 38 15 42 24C38 33 31 38 24 38C17 38 10 33 6 24Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <div>
+              <h3>24/7 Threat Monitoring</h3>
+              <p>Continuous log analysis and alerting so incidents are caught in minutes, not months.</p>
+            </div>
+          </div>
+
+          <div class="trust-item fade-in">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="24" height="24" fill="none">
+                <path d="M14 34C9 34 6 30.8 6 27C6 23.4 8.8 20.4 12.4 20.1C13.3 14.9 17.9 11 23.3 11C28.8 11 33.4 15 34.2 20.3C38.4 20.9 42 24.5 42 29C42 32.9 38.9 36 35 36H14V34Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <rect x="19" y="24" width="10" height="8" rx="1.3" stroke="currentColor" stroke-width="2.1"/>
+                <path d="M21 24V22C21 20.3 22.3 19 24 19C25.7 19 27 20.3 27 22V24" stroke="currentColor" stroke-width="2.1"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Encrypted Backups &amp; Recovery</h3>
+              <p>Encrypted, air-gapped backup copies and tested recovery plans — because backups you've never restored aren't a plan.</p>
+            </div>
+          </div>
+
+          <div class="trust-item fade-in">
+            <div class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="24" height="24" fill="none">
+                <circle cx="24" cy="16" r="7" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M10 40C10 32 16.3 27 24 27C31.7 27 38 32 38 40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Security Awareness Training</h3>
+              <p>Ongoing phishing simulations and staff training — most breaches start with a person, not a firewall.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ TESTIMONIALS ============ -->
     <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
       <div class="container">
@@ -195,6 +383,90 @@
             <button type="button" class="carousel-btn" id="nextTestimonial" aria-label="Next testimonial">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEAD MAGNET ============ -->
+    <section class="lead-magnet" id="checklist" aria-labelledby="lead-magnet-heading">
+      <div class="container lead-magnet-grid">
+        <div class="lead-magnet-copy fade-in">
+          <p class="eyebrow">Free Download</p>
+          <h2 id="lead-magnet-heading">The 10-Point IT Security Checklist</h2>
+          <p class="section-lead">The same baseline our engineers check on day one with every new client. Ten items, no jargon, work through it this afternoon.</p>
+
+          <ul class="lead-magnet-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13L9.5 17.5L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Multi-factor authentication coverage check
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13L9.5 17.5L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Backup &amp; recovery verification steps
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13L9.5 17.5L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Patch management &amp; end-of-life software audit
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13L9.5 17.5L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Least-privilege access review template
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13L9.5 17.5L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Incident response quick-reference card
+            </li>
+          </ul>
+
+          <div class="lead-magnet-form-wrap">
+            <form id="leadMagnetForm" class="lead-magnet-form" novalidate>
+              <div class="honeypot" aria-hidden="true">
+                <label for="lm-website">Website</label>
+                <input type="text" id="lm-website" name="lm-website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-row-inline">
+                <input type="email" id="lm-email" name="email" required placeholder="you@company.com" autocomplete="email" aria-label="Email address" aria-describedby="lm-email-error">
+                <button type="submit" class="btn btn-primary" id="leadMagnetSubmit">
+                  <span class="btn-label">Send Me the Checklist</span>
+                  <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
+              </div>
+              <p class="field-error" id="lm-email-error" role="alert"></p>
+              <p class="lead-magnet-privacy">Submitted over HTTPS. We never sell or share your email. Unsubscribe anytime.</p>
+            </form>
+
+            <div class="lead-magnet-success" id="leadMagnetSuccess" hidden>
+              <p><strong>You're in.</strong> Grab your copy below — we've also sent a link to your inbox.</p>
+              <a href="resources/it-security-checklist.html" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Download the Checklist</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lead-magnet-visual fade-in" aria-hidden="true">
+          <div class="checklist-mock">
+            <p class="checklist-mock-title">it-security-checklist.pdf</p>
+            <div class="checklist-mock-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M7 12L10.5 15.5L17 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Enable MFA on all admin accounts
+            </div>
+            <div class="checklist-mock-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M7 12L10.5 15.5L17 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Test your last backup restore
+            </div>
+            <div class="checklist-mock-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M7 12L10.5 15.5L17 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Audit admin &amp; shared accounts
+            </div>
+            <div class="checklist-mock-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/></svg>
+              Review firewall rule set
+            </div>
+            <div class="checklist-mock-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/></svg>
+              Confirm offboarding revokes access
+            </div>
           </div>
         </div>
       </div>
@@ -270,6 +542,11 @@
               <span class="btn-label">Send Enquiry</span>
               <span class="btn-spinner" aria-hidden="true"></span>
             </button>
+
+            <p class="trust-note">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="1.5" stroke="currentColor" stroke-width="2"/><path d="M8 11V8C8 5.8 9.8 4 12 4C14.2 4 16 5.8 16 8V11" stroke="currentColor" stroke-width="2"/></svg>
+              Submitted over HTTPS. We never sell or share your information.
+            </p>
           </form>
 
           <div class="enquiry-success" id="enquirySuccess" hidden tabindex="-1">
@@ -316,7 +593,9 @@
         <ul>
           <li><a href="#top">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#checklist">Free Checklist</a></li>
           <li><a href="#enquiry">Contact</a></li>
         </ul>
       </nav>
@@ -336,7 +615,7 @@
         <ul class="footer-contact">
           <li>481 Kestrel Avenue, Suite 210<br>Portland, OR 97204</li>
           <li><a href="tel:+15035551029">+1 (503) 555-1029</a></li>
-          <li><a href="mailto:hello@planetit.example">hello@planetit.com</a></li>
+          <li><a href="mailto:hello@planetit.com">hello@planetit.com</a></li>
         </ul>
       </div>
     </div>
