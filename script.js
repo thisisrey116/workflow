@@ -12,6 +12,12 @@
 const FORM_ENDPOINT = 'https://example.com/api/enquiries';
 
 /* ==========================================================================
+   WHATSAPP NUMBER
+   International format, digits only (no +, spaces, or leading 0).
+   ========================================================================== */
+const WHATSAPP_NUMBER = '6592297778';
+
+/* ==========================================================================
    Mobile nav toggle
    Opens/closes the hamburger menu and syncs aria-expanded for screen readers.
    ========================================================================== */
@@ -430,6 +436,48 @@ function initFooterYear() {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
 
+/* ==========================================================================
+   WhatsApp chat widget
+   Builds wa.me links (with per-suggestion prefilled text) and toggles the
+   panel open/closed via a class on the widget wrapper.
+   ========================================================================== */
+function initWhatsAppWidget() {
+  const widget = document.getElementById('waWidget');
+  const fab = document.getElementById('waFabToggle');
+  const panel = document.getElementById('waPanel');
+  const closeBtn = document.getElementById('waClose');
+  if (!widget || !fab || !panel || !closeBtn) return;
+
+  widget.querySelectorAll('[data-wa-message]').forEach((link) => {
+    link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(link.dataset.waMessage)}`;
+  });
+
+  function setOpen(isOpen) {
+    widget.classList.toggle('open', isOpen);
+    fab.setAttribute('aria-expanded', String(isOpen));
+    panel.hidden = !isOpen;
+  }
+
+  fab.addEventListener('click', () => setOpen(!widget.classList.contains('open')));
+  closeBtn.addEventListener('click', () => {
+    setOpen(false);
+    fab.focus();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && widget.classList.contains('open')) {
+      setOpen(false);
+      fab.focus();
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (widget.classList.contains('open') && !widget.contains(event.target)) {
+      setOpen(false);
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initNavToggle();
   initSmoothScroll();
@@ -439,4 +487,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initStatCounters();
   initLeadMagnetForm();
   initFooterYear();
+  initWhatsAppWidget();
 });
