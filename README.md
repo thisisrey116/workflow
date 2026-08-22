@@ -22,6 +22,7 @@ PLANET IT is a single-page site for a fictional managed IT services provider. It
 - **Testimonials** carousel (swipeable on mobile, static grid on desktop)
 - **Lead magnet** — a gated "10-Point IT Security Checklist" download with its own email-capture form
 - **Enquiry form** with client-side validation, a honeypot field for spam, and async submission via `fetch`
+- **Floating WhatsApp widget** — bottom-right chat launcher with suggested queries that open `wa.me` with a prefilled message
 - SEO basics: canonical/Open Graph/Twitter meta, JSON-LD `LocalBusiness` schema, `robots.txt`, `sitemap.xml`
 - A basic `Content-Security-Policy` + `Referrer-Policy` meta pair, and honest "submitted over HTTPS" trust microcopy on both forms
 - Accessibility touches throughout: skip link, visible focus states, `prefers-reduced-motion` support (all animation is disabled/frozen for it), ARIA labeling
@@ -56,6 +57,8 @@ const FORM_ENDPOINT = 'https://example.com/api/enquiries';
 ```
 
 If you do, also update the `connect-src`/`form-action` values in the `Content-Security-Policy` meta tag in [index.html](index.html) — the current policy only allow-lists `example.com`.
+
+To change the WhatsApp number the floating chat widget links to, edit `WHATSAPP_NUMBER` in [script.js](script.js) (international format, digits only — no `+`, spaces, or leading `0`).
 
 ## Project tooling
 
