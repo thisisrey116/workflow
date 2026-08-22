@@ -43,7 +43,7 @@ const FORM_ENDPOINT = 'https://example.com/api/enquiries';
 
 ## GitHub Pages
 
-🔗 Live demo: _(added after Pages deploy)_
+🔗 Live demo: https://thisisrey116.github.io/workflow/
 
 ## Credits
 
