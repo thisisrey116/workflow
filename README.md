@@ -8,6 +8,8 @@ A responsive marketing landing page for a managed IT support, cloud, and cyberse
 ![No build step](https://img.shields.io/badge/build-none-lightgrey)
 ![License](https://img.shields.io/badge/license-Unlicensed-lightgrey)
 
+![Screenshot](assets/screenshot.png)
+
 ## About
 
 PLANET IT is a single-page site for a fictional managed IT services provider. It's built with plain HTML, CSS, and vanilla JavaScript — no framework, no bundler, no dependencies. The page covers:
